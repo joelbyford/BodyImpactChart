@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery Widget Version Example</title>
+    <link href="jquery-ui-1.10.4.custom.min.css" rel="stylesheet" />
+    <script src="jquery-1.11.0.js"></script>
+    <script src="jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="BodyImpactWidget.js"></script>
+
+</head>
+<body>
+    
+    <table>
+        <tr>
+            <td colspan ="3"><div id="testDiv" /></td>
+        </tr>
+        <tr>
+            <td><input type="button" onclick="clearDiagram()" value ="clear"/></td>
+            <td><input type="button"  onclick="saveDiagram()" value="save" /></td>
+            <td><input type="button"  onclick="loadDiagram()" value="load" /></td>
+        </tr>
+        <tr>
+            <td colspan ="3">Coordinates From Widget: <input id="txtSaved" /></td>
+        </tr>
+    </table>
+
+    <!-- Add to End to be sure element is loaded -->
+    <script>
+        //initialize and add the widget
+        $("#testDiv").BodyImpactChart();
+
+        //function to handle clearing the diagram
+        function clearDiagram() {
+            $("#testDiv").BodyImpactChart("clearCanvas");
+        }
+
+        //function to handle saving (retrieving coordinate list) from the diagram
+        function saveDiagram() {
+            $("#txtSaved").val ($("#testDiv").BodyImpactChart("saveCanvas"));
+        }
+
+        //function to handle loading the diagram
+        function loadDiagram() {
+            $("#testDiv").BodyImpactChart("loadCanvas", $("#txtSaved").val());
+        }
+
+    </script>
+</body>
+</html>

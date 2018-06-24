@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BodyImpactChart", "BodyImpactChart\BodyImpactChart.csproj", "{A93EEF15-9EDD-4F49-B024-AACB8159D1EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A93EEF15-9EDD-4F49-B024-AACB8159D1EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A93EEF15-9EDD-4F49-B024-AACB8159D1EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A93EEF15-9EDD-4F49-B024-AACB8159D1EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A93EEF15-9EDD-4F49-B024-AACB8159D1EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

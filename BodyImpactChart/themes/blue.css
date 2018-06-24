@@ -1,0 +1,41 @@
+/* Blue Stylesheet */
+.colorDark {
+    background-color:rgba(0,32,80,1);/*#002050;*/
+}
+
+.colorDark-inactive {
+    background-color:rgba(0,32,80,.5);/*#002050;*/
+}
+
+.colorMedium {
+    background-color:rgba(0,24,143,1);/*#00188F;*/
+}
+
+.colorMedium-inactive {
+    background-color:rgba(0,24,143,.5);/*#00188F;*/
+}
+
+.colorLight{
+    background-color:rgba(70,104,197,1);/*#4668C5;*/
+}
+
+.colorLight-inactive {
+    background-color:rgba(70,104,197,.5);/*#4668C5;*/
+}
+
+/*
+.tabButton-inactive {
+     background-color:rgba(70,104,197,.25);
+    color:black;
+}
+
+.tabButton {
+     background-color:rgba(70,104,197,1);
+}
+
+.tabPanel {
+    border:5px solid rgba(70,104,197,1);
+    padding:0px;
+}
+
+*/

@@ -1,0 +1,40 @@
+/* Aqua Stylesheet */
+.colorDark {
+    background-color:rgba(0,130,114,1);
+}
+
+.colorDark-inactive {
+    background-color:rgba(0,130,114,.5);
+}
+
+.colorMedium {
+    background-color:rgba(0,178,148,1);
+}
+
+.colorMedium-inactive {
+    background-color:rgba(0,178,148,.5);
+}
+
+.colorLight{
+    background-color:rgba(0,216,204,1);
+}
+
+.colorLight-inactive {
+    background-color:rgba(0,216,204,.5);
+}
+
+/*
+.tabButton-inactive {
+     background-color:rgba(70,104,197,.25);
+    color:black;
+}
+
+.tabButton {
+     background-color:rgba(70,104,197,1);
+}
+
+.tabPanel {
+    border:5px solid rgba(70,104,197,1);
+    padding:0px;
+}
+    */

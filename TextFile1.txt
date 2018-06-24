@@ -1,0 +1,53 @@
+<script>
+
+        //Canvas onClick Handler
+        function diagramClickHandler(x, y) {
+            var ctx = canvDiagram.getContext("2d");
+            var rect = canvDiagram.getBoundingClientRect();
+            ctx.font = "bold 8pt Arial";
+            ctx.textAlign = "start";
+            ctx.textBaseline = "middle";
+            ctx.fillStyle = "red";
+            var locX = x - rect.left;
+            var locY = (y - rect.top) / 2 //Not sure why we have to divide by 2. . . but only way it works. . .
+            ctx.fillText("X", locX, locY );
+
+            divCoords.value = divCoords.value + x + ":" + y + "|";
+        }
+
+        //Clear Button onClick Handler
+        function diagramClearHandler() {
+            var ctx = canvDiagram.getContext("2d");
+            var rect = canvDiagram.getBoundingClientRect();
+            //clear the diagram
+            ctx.clearRect(canvDiagram.clientLeft, canvDiagram.clientTop - 1, canvDiagram.width, rect.height);
+            //clear the coordinates list
+            divCoords.value = "";
+
+        }
+
+        //Save Button onClick Handler
+        function diagramSaveHandler(txtCordsList) {
+            //normally this would save to a database somewhere, but just move to another part of the page for now.
+            savedCoords.textContent = txtCordsList;
+        }
+
+        //Load Button onClick Handler
+        function diagramLoadHandler(txtCordsList) {
+            //clear the area
+            diagramClearHandler();
+
+            //normally this would come from the database, but for now just load from the savedCoords div.
+
+            //split the string up into coordinate pairs
+            var coordsArray = null;
+            var coordsArray = txtCordsList.split("|");
+
+            //Loop through each and plot back on diagram
+            for (var i = 0; i < coordsArray.length-1; i++) {
+                var xyCoords = coordsArray[i].split(":");
+                diagramClickHandler(xyCoords[0], xyCoords[1]);
+            }
+
+        }
+    </script>
